@@ -3,7 +3,7 @@ from my_states import PendingState, ApprovedState, RejectedState
 
 import unittest
  
-class TestAdd(unittest.TestCase):
+class TestWorkflow(unittest.TestCase):
     """
     Test Workflow class with all its functions
     """
