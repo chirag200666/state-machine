@@ -26,7 +26,7 @@ class ApprovedState(State):
         if event == 'reject':
             return RejectedState()
         elif event == 'hold':
-            return ApprovedState()
+            return PendingState()
 
         return self
 

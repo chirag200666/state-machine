@@ -27,3 +27,10 @@ class State(object):
         Returns the name of the State.
         """
         return self.__class__.__name__
+
+    def __eq__(self, other): 
+        if not isinstance(other, State):
+            # don't attempt to compare against unrelated types
+            return NotImplemented
+
+        return str(self) == str(other)

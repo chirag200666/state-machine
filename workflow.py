@@ -32,11 +32,12 @@ class Workflow(object):
         # The next state will be the result of the on_event function.
         self.state = self.state.on_event(event)
 
-workflow = Workflow('pending')
-print('string workflow with state: ', workflow.state)
-workflow.on_event('pending')
-workflow.on_event('approve')
-print('state after few events: ',workflow.state)
-workflow.on_event('pending')
-workflow.on_event('reject')
-print('final state: ',workflow.state)
+if __name__ == '__main__':
+    workflow = Workflow('pending')
+    print('string workflow with state: ', workflow.state)
+    workflow.on_event('pending')
+    workflow.on_event('approve')
+    print('state after few events: ',workflow.state)
+    workflow.on_event('pending')
+    workflow.on_event('reject')
+    print('final state: ',workflow.state)
