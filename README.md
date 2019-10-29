@@ -10,3 +10,8 @@ Run all test cases
 ```
 python3 test_workflow.py
 ```
+## Test with Docker
+```
+docker build -t state-machine .
+docker run state-machine
+```
